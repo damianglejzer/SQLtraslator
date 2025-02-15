@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
+      format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body{
+  background-color: #212121;
+  font-family: monospace;
+}
+
+h3{
+  font-size: 28px;
+  color: rgb(207, 207, 207);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.icon {
+  width: 90px;
+
+}
+
+.wrapper {
+  width: 550px;
+  max-width: 100%;
+  position: relative;
+  transform: translateX(-6%);
+  margin-bottom: 10px;
+}
+
+.myinput{
+  background: rgb(48, 48, 48);
+  font-size: 14px;
+  color: rgb(207, 207, 207);
+  caret-color: rgb(207, 207, 207);
+  border: none;
+  border-radius: 50px;
+  padding: 16px 50px 16px 20px;
+  width: 100%;
+  font-family: monospace;
+}
+
+
+.myinput:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.mybutton {
+  background-color: rgb(207, 207, 207);
+  border-width: 0;
+  border-radius: 50%;
+  height: 80%;
+  aspect-ratio: 1;
+  position: absolute;
+  right: -65px;
+  top: 10%;
+}
+
+.mybutton:hover {
+  background-color: rgb(153, 153, 153);
+  cursor: pointer;
+}
+
+
+.instructionBox {
+  background-color:rgb(48, 48, 48);
+  color: rgb(207, 207, 207);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 12px;
+
+}
+
+.instructionBox p {
+  margin: 0;
+  width: 580px;
+  text-align: left;
+  font-family: monospace;
+  font-size: 14px;
+  text-align: justify;
+}
+
+hr{
+  width: 620px;
+  background-color: rgb(207, 207, 207);
+}
+
+.queryContainer {
+  display: flex;
+  align-items: center;
+  background: rgb(48, 48, 48);
+  color: rgb(207, 207, 207);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 10px 0;
+}
+
+pre {
+  flex-grow: 1;
+  margin: 0;
+  font-size: 14px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  width: 450px;
+}
+
+.copyButton {
+  background: #212121;
+  color: rgb(207, 207, 207);
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: #000 0.1s ease;
+  min-width: 60px;
+  text-align: center;
+  position: relative;
+}
+.deleteButton {
+  background: #212121;
+  color: rgb(207, 207, 207);
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  min-width: 60px;
+  text-align: center;
+  position: relative;
+}
+
+
+.copyButton::after {
+  content: "Copied!";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.copyButton.copied::after {
+  opacity: 1;
+}
+
+.copyButton span {
+  opacity: 1;
+}
+
+.copyButton.copied span {
+  opacity: 0;
+}
+
+
+
+@media (max-width: 768px) {
+  pre {
+    width: 320px;
+  }
+  .instructionBox p {
+    width: 450px;
+  }
+  .wrapper {
+    width: 420px;
+    max-width: 100%;
+    position: relative;
+    transform: translateX(-8.5%);
+  }
+  .mybutton {
+    right: -15%;
+  }
+  hr{
+    width: 490px;
+  }
+  
+  
+}
+@media (max-width: 480px) {
+  pre {
+    width: 172px;
+  }
+  .instructionBox p {
+    width: 302px;
+  }
+  .wrapper {
+    width: 272px;
+    max-width: 100%;
+    position: relative;
+    transform: translateX(-13%);
+  }
+  .mybutton {
+    right: -23%;
+  }
+  hr{
+    width: 342px;
+  }
+
+}
