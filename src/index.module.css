@@ -66,8 +66,8 @@ h3{
   background-color: rgb(207, 207, 207);
   border-width: 0;
   border-radius: 50%;
-  height: 80%;
-  aspect-ratio: 1;
+  width: 39px;
+  height: 39px;
   position: absolute;
   right: -65px;
   top: 10%;
