@@ -211,6 +211,9 @@ pre {
   .mybutton {
     right: -23%;
   }
+  .mybutton svg{
+    display: none;
+  }
   hr{
     width: 342px;
   }
